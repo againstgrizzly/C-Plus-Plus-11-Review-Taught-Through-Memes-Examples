@@ -1,15 +1,13 @@
 # C-Plus-Plus-11-Review-Taught-Through-Memes-Examples
 
 Brannon:
- Type Inference
- Lambdas
- C++11 Threading
- Literal Strings
- Range Based For Loops
- Variadic templates
-Explicit overrides and final
-
-
+ * Type Inference
+ * Lambdas
+ * C++11 Threading
+ * Literal Strings
+ * Range Based For Loops
+ * Variadic templates
+ * Explicit overrides and final
  
 Andrew:
  * Algorithms
@@ -22,7 +20,8 @@ Andrew:
 Topics that shouldn't take a long time to cover (might not need code to demonstrate):
  * Type long long int
  * Features Removed from C++98/03 to C++11
- * Right angle bracket improvements ("std::map<int, std::map<int, int>>" works in C++11 but doesnt work in C++98 you need "std::map<int, std::map<int, int> >")
+ * Right angle bracket improvements ("std::map<int, std::map<int, int>>" works in C++11 but doesnt work in C++98 you need "std::map<int, std::map<int, int> >"
+ * std::to_string()
  
 Topics that we can mention but probably shouldn't cover:
  * Improved C compatibility
@@ -37,7 +36,6 @@ Topics not taken yet (Most of this is from https://en.wikipedia.org/wiki/C%2B%2B
  * Rvalue references and move constructors
  * Generalized constant expressions
  * Modification to the definition of plain old data
- * Explicit overrides and final
  * Null pointer constant
  * Strongly typed enumerations
  * Explicit conversion operators
