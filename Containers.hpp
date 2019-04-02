@@ -1,0 +1,62 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <map>
+#include <forward_list>
+
+// To delete an iterator from a map in C++98, you must create a temporary iterator, increment the original iterator, then erase from the map
+void cpp98_mapErase()
+{
+    std::map<int, std::string> map98;
+
+    for (int i = 1; i < 6; ++i)
+    {
+        std::stringstream ss;
+        ss << i;
+        map98[i] = ss.str();
+    }
+
+    std::cout << "C++98  Output: ";
+    std::map<int, std::string>::iterator map98Iter = map98.begin();
+    while (map98Iter != map98.end())
+    {
+        std::cout << map98Iter->second;
+
+        std::map<int, std::string>::iterator tempIter = map98Iter;
+        ++map98Iter;
+        map98.erase(tempIter);
+    }
+}
+
+// In C++11, std::map::erase will return an iterator pointing to the next element located within the container
+// Works for std::multimap::erase as well
+void cpp11_mapErase()
+{
+    std::map<int, std::string> map11 {{1, "1"}, {2, "2"}, {3, "3"}, {4, "4"}, {5, "5"}};
+
+    std::cout << "C++11  Output: ";
+    for (std::map<int, std::string>::iterator map11Iter = map11.begin(); map11Iter != map11.end(); map11Iter = map11.erase(map11Iter))
+    {
+        std::cout << map11Iter->second;
+    }
+}
+
+// C++11 std::forward_list is a single-linked list instead of a double-linked list such as std::list
+// A bucket will always be linked to the next bucket in a list but not to the bucket before it
+void forwardLists()
+{
+
+}
+
+// C++11 introduces unordered (multi)map and unorderd (multi)set
+void hashTables()
+{
+
+}
+
+// Similar to vectors but has a defined size
+void arrays()
+{
+
+}

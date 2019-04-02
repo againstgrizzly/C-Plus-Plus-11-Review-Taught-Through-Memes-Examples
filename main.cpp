@@ -6,6 +6,7 @@
 
 #include "Dog.hpp"
 #include "Car.hpp"
+#include "Containers.hpp"
 
 void LambdaFunctionExamples();
 
@@ -29,7 +30,7 @@ void LambdaFunctionExamples()
     // Fun fact: Lambda-calculus was the first object-oriented
     // language (1932) - William Cook, "On Understanding Data Abstraction, Revisited"
 
-    // Syntax: [](){} 
+    // Syntax: [](){}
     // [] capture
     // () arguments (params)
     // {} lambda implementation (function meat)
@@ -56,7 +57,7 @@ void LambdaFunctionExamples()
 
     std::cout << "1 + 2 = " << add(1, 2) << std::endl;
 
-    // When creating custom lambda functions, 
+    // When creating custom lambda functions,
     auto subtract = [](int inFirstParam, int inSecondParam) {
         return inFirstParam - inSecondParam;
     };
@@ -99,7 +100,7 @@ void LambdaFunctionExamples()
     // After
     std::cout << "After Update:\n\t" << myCar.to_string() << std::endl
          << std::endl;
-     
+
     /**********************************************************************/
     /****************************** Captures ******************************/
     /**********************************************************************/
@@ -163,7 +164,7 @@ void LambdaFunctionExamples()
     /**********************************************************/
 
     // Functional programming is all about writing the program functions
-    // similar to a mathematical fucntion 
+    // similar to a mathematical fucntion
     // ex. f(x) = x * x;
     //     f(5) = 25
     //     f(x, y) = x^2 + y^2
