@@ -6,6 +6,10 @@ Brannon:
  C++11 Threading
  Literal Strings
  Range Based For Loops
+ Variadic templates
+Explicit overrides and final
+
+
  
 Andrew:
  Algorithms
