@@ -21,7 +21,6 @@ Topics that shouldn't take a long time to cover (might not need code to demonstr
  * Type long long int
  * Features Removed from C++98/03 to C++11
  * Right angle bracket improvements ("std::map<int, std::map<int, int>>" works in C++11 but doesnt work in C++98 you need "std::map<int, std::map<int, int> >"
- * std::to_string()
  
 Topics that we can mention but probably shouldn't cover:
  * Improved C compatibility
@@ -54,3 +53,4 @@ Topics not taken yet (Most of this is from https://en.wikipedia.org/wiki/C%2B%2B
  * Polymorphic wrappers for function objects
  * Type traits for metaprogramming
  * Uniform method for computing the return type of function objects
+ * String improvements
