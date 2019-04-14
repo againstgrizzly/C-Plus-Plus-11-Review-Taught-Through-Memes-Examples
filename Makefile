@@ -1,11 +1,10 @@
 CC=g++
-
 CFLAGS= -c -std=c++11 -Wall -pedantic
 
 all: hello
 
 hello: main.o
-	$(CC) main.o -Wc++11-extensions
+	$(CC) main.o
 
 main.o: main.cpp Car.o Dog.o Containers.o InitializerLists.o Tuples.o
 	$(CC) $(CFLAGS) main.cpp
@@ -22,8 +21,5 @@ Containers.o: Containers.hpp
 InitializerLists.o: InitializerLists.hpp
 	$(CC) $(CFLAGS) InitializerLists.hpp
 
-Dog.o: Tuples.hpp
+Tuples.o: Tuples.hpp
 	$(CC) $(CFLAGS) Tuples.hpp
-
-# clean:
-# 	rm -rf
