@@ -3,6 +3,7 @@
 #include <sstream>
 #include <functional>
 #include <math.h>
+#include <thread>
 
 #include "Dog.hpp"
 #include "Car.hpp"
@@ -10,12 +11,14 @@
 
 void LambdaFunctions();
 void RangeBasedForLoops();
+void MultiThreading();
+void aFunction();
 
 int main()
 {
    // LambdaFunctions();
    // RangeBasedForLoops();
-
+    MultiThreading();
     return 0;
 }
 
@@ -251,8 +254,46 @@ void RangeBasedForLoops()
         {3, "Misty"}
     };
 
+    // This monstrosity
+    for (std::map<int, std::string>::const_iterator idPersonMapIter = idPersonMap.begin(); idPersonMapIter != idPersonMap.end(); ++idPersonMapIter)
+    {
+        std::cout << "<" << idPersonMapIter->first << ", " << idPersonMapIter->second << ">" << std::endl;
+    }
+
+    // Becomes this
     for (const std::pair<int, std::string>& idPersonPair : idPersonMap)
     {
         std::cout << "<" << idPersonPair.first << ", " << idPersonPair.second << ">" << std::endl;
     }
+}
+
+void MultiThreading()
+{
+    // Believe it or not prior to C++11 C++
+    // did not support multithreading in the language
+    // nor the standard library. In the past, you needed
+    // to use a third party library (such as boost) or rely on C based 
+    // POSIX threads. Gross! Luckily, the future is now. C++11 has 
+    // extensive support for multithreading
+
+    // To run on a separate thread, the std::thread class is used
+    // When a function, function object, or lambda expression is passed
+    // into the constructor of std::thread, the thread is executed
+
+    // In this example, we will be launching lambda expressions on different threads
+
+std::cout << "JETER" << std::endl;
+     std::function<void()> myFun = aFunction;
+
+     myFun();
+     std::cout << "JETER" << std::endl;
+
+    // std::thread myThread(myFun);
+
+
+}
+
+void aFunction()
+{
+    std::cout << "your mom" << std::endl;
 }
