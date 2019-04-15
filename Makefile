@@ -1,10 +1,8 @@
 CC=g++
-CFLAGS= -c -std=c++11 -Wall -pedantic
+CFLAGS= -c -std=c++11 -Wall -pedantic -pthread
 
-all: hello
-
-hello: main.o
-	$(CC) main.o
+CplusPlus11Review: main.o
+	$(CC) -o bin/CplusPlus11Review main.o
 
 main.o: main.cpp Car.o Dog.o Containers.o InitializerLists.o Tuples.o
 	$(CC) $(CFLAGS) main.cpp
