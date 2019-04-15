@@ -283,12 +283,18 @@ void MultiThreading()
     // In this example, we will be launching lambda expressions on different threads
 
 std::cout << "JETER" << std::endl;
-     std::function<void()> myFun = aFunction;
+    std::function<void()> myFun = aFunction;
 
-     myFun();
-     std::cout << "JETER" << std::endl;
+    myFun();
+    std::cout << "JETER" << std::endl;
 
-     //std::thread myThread(myFun);
+    auto aLambda = [](int x) -> void {
+        std::cout << x << std::endl;
+    };
+
+    aLambda(4);
+    std::thread myThread(aLambda, 4);
+    myThread.join();
 
 
 }
