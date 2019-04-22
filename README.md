@@ -8,6 +8,10 @@ Brannon:
  * Range Based For Loops x
  * Variadic templates
  * Explicit overrides and final
+  * Smart Pointers
+   * Regular Expressions
+ * User-defined literals
+
  
 Andrew:
  * Algorithms
@@ -28,8 +32,6 @@ Topics that we can mention but probably shouldn't cover:
  * Random number generator improvements
  
 Topics not taken yet (Most of this is from https://en.wikipedia.org/wiki/C%2B%2B11 and http://www.cplusplus.com/reference/):
- * Regular Expressions
- * Smart Pointers
  * Uniform Initialization
  * Alternative function syntax
  * Rvalue references and move constructors
@@ -39,7 +41,6 @@ Topics not taken yet (Most of this is from https://en.wikipedia.org/wiki/C%2B%2B
  * Strongly typed enumerations
  * Explicit conversion operators
  * Template aliases
- * User-defined literals
  * Thread-local storage
  * Explicitly defaulted and deleted special member functions
  * Static assertions
