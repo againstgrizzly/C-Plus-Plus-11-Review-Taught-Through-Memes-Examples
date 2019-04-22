@@ -2,10 +2,10 @@
 
 Brannon:
  * Type Inference
- * Lambdas
- * C++11 Threading
+ * Lambdas x
+ * C++11 Threading 
  * Literal Strings
- * Range Based For Loops
+ * Range Based For Loops x
  * Variadic templates
  * Explicit overrides and final
  
