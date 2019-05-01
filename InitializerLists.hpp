@@ -2,8 +2,6 @@
 #include <list>
 #include <vector>
 
-// Show this before container improvements
-
 // C++98 does not allow containers to be initialized with data
 void cpp98_initializerList()
 {
@@ -15,17 +13,26 @@ void cpp98_initializerList()
     }
 }
 
-struct aStruct
-{
-    int anInt;
-    std::string aString;
-};
-
-// C++11 does allow containers to be initialized with data
+// C++11 allows containers to be initialized with data
 void cpp11_initializerList()
 {
-    std::list<int> list11 {1, 2, 3, 4, 5};
+    std::vector<int> vector {1, 2, 3, 4, 5};
 
     // C++11 can also initialize using objects with multiple member variables
-    std::vector<aStruct> structVector {{1, "1"}, {2, "2"}, {3, "3"}, {4, "4"}, {5, "5"}};
+    struct Person
+    {
+        std::string Name;
+        std::string Hometown;
+        std::string Profession;
+    };
+
+    std::vector<Person> personVector{{"Todd Howard", "Bethesda", "Professional Liar"},
+                                     {"Guy Fieri", "Flavortown", "Professional Cook"},
+                                     {"Thanos", "Titan", "Savior of the Universe"}};
+
+    for (Person person : personVector)
+    {
+        std::cout << "Name: " << person.Name << ", Hometown: "
+            << person.Hometown << ", Profession: " << person.Profession << std::endl;
+    }
 }
